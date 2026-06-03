@@ -42,7 +42,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 
 # --- Utilities, Tailscale, Ollama -------------------------------------------
 RUN apt-get update && apt-get install -y --no-install-recommends \
-        ca-certificates curl \
+        ca-certificates curl zstd \
     && rm -rf /var/lib/apt/lists/* \
     && curl -fsSL https://tailscale.com/install.sh | sh \
     && curl -fsSL https://ollama.com/install.sh | sh
